@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="LeetCode,array," />
 
 
 
@@ -51,19 +51,19 @@
 
 
 
-<meta name="description" content="最近发现对过去的知识遗忘得特别快。研一刚学的计算机体系结构，音频识别，现在想回想起来却十分困难，于是产生了把笔记记录在博客中的念头。上网找了一圈，发现Hexo是一个满足需求且方便快捷的博客搭建工具，于是现在开始尝试着用一下。
-什么是HexoHexo是一个基于Node.js的静态博客网站生成器，利用它可以很方便地生成静态网页并托管在github或Heroku上。作者是来自台湾的Tommy Chen。">
+<meta name="description" content="题目Given an array of n integers where n &amp;gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+Solve it without division and in O(n">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo Note1(Introduction)">
-<meta property="og:url" content="http://yoursite.com/2015/12/20/Hexo1/index.html">
+<meta property="og:title" content="Leet Code 238 Product of Array Except Self">
+<meta property="og:url" content="http://yoursite.com/2015/12/22/Leet3/index.html">
 <meta property="og:site_name" content="Kthsdwwl's Blog">
-<meta property="og:description" content="最近发现对过去的知识遗忘得特别快。研一刚学的计算机体系结构，音频识别，现在想回想起来却十分困难，于是产生了把笔记记录在博客中的念头。上网找了一圈，发现Hexo是一个满足需求且方便快捷的博客搭建工具，于是现在开始尝试着用一下。
-什么是HexoHexo是一个基于Node.js的静态博客网站生成器，利用它可以很方便地生成静态网页并托管在github或Heroku上。作者是来自台湾的Tommy Chen。">
-<meta property="og:updated_time" content="2015-12-20T22:57:42.484Z">
+<meta property="og:description" content="题目Given an array of n integers where n &amp;gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+Solve it without division and in O(n">
+<meta property="og:updated_time" content="2015-12-22T22:12:55.677Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo Note1(Introduction)">
-<meta name="twitter:description" content="最近发现对过去的知识遗忘得特别快。研一刚学的计算机体系结构，音频识别，现在想回想起来却十分困难，于是产生了把笔记记录在博客中的念头。上网找了一圈，发现Hexo是一个满足需求且方便快捷的博客搭建工具，于是现在开始尝试着用一下。
-什么是HexoHexo是一个基于Node.js的静态博客网站生成器，利用它可以很方便地生成静态网页并托管在github或Heroku上。作者是来自台湾的Tommy Chen。">
+<meta name="twitter:title" content="Leet Code 238 Product of Array Except Self">
+<meta name="twitter:description" content="题目Given an array of n integers where n &amp;gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+Solve it without division and in O(n">
 
 
 
@@ -75,7 +75,7 @@
   };
 </script>
 
-  <title> Hexo Note1(Introduction) | Kthsdwwl's Blog </title>
+  <title> Leet Code 238 Product of Array Except Self | Kthsdwwl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -215,7 +215,7 @@
             
             
               
-                Hexo Note1(Introduction)
+                Leet Code 238 Product of Array Except Self
               
             
           </h1>
@@ -224,8 +224,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-20T01:52:14-05:00" content="2015-12-20">
-              2015-12-20
+            <time itemprop="dateCreated" datetime="2015-12-22T13:56:54-05:00" content="2015-12-22">
+              2015-12-22
             </time>
           </span>
 
@@ -234,8 +234,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -263,16 +263,13 @@
       
 
       
-        <span itemprop="articleBody"><p>最近发现对过去的知识遗忘得特别快。研一刚学的计算机体系结构，音频识别，现在想回想起来却十分困难，于是产生了把笔记记录在博客中的念头。上网找了一圈，发现Hexo是一个满足需求且方便快捷的博客搭建工具，于是现在开始尝试着用一下。</p>
-<h2 id="u4EC0_u4E48_u662FHexo"><a href="#u4EC0_u4E48_u662FHexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h2><p><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>是一个基于Node.js的静态博客网站生成器，利用它可以很方便地生成静态网页并托管在github或Heroku上。作者是来自台湾的Tommy Chen。相比于其他静态博客生成器，Hexo速度快，插件丰富，是搭建博客的绝佳选择。</p>
+        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given an array of n integers where n &gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].</p>
+<p>Solve it without division and in O(n).</p>
+<p>For example, given [1,2,3,4], return [24,12,8,6].</p>
+<p><strong>Follow up:</strong><br>Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)</p>
+<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>要在O(n)时间里完成计算，本可以先用一个pass计算出所有数的综合，接着用第二个pass依次除每个数来得到结果，但题目限制了除法的使用，因此得另找门路。这里使用的方法是对于每个元素，将数组分成左边和右边两部分，依次计算再乘起来。做法是先用一个pass，计算出对于每个元素，它左边所有元素的积；接着用第二个pass，从右至左遍历数组，将之前算的每个积乘上元素右边的元素积。</p>
 <a id="more"></a>
-<h2 id="u4E3A_u4EC0_u4E48_u7528Hexo"><a href="#u4E3A_u4EC0_u4E48_u7528Hexo" class="headerlink" title="为什么用Hexo"></a>为什么用Hexo</h2><h4 id="Hexo_u5177_u6709_u4EE5_u4E0B_u4F18_u70B9_uFF1A"><a href="#Hexo_u5177_u6709_u4EE5_u4E0B_u4F18_u70B9_uFF1A" class="headerlink" title="Hexo具有以下优点："></a>Hexo具有以下优点：</h4><ul>
-<li>迅速：Hexo基于Node.js，并且能瞬间生成静态文件</li>
-<li>编写：支持Github Flavored Markdown语法</li>
-<li>扩展：支持Octopress的所有插件，以及EJS，Swig和Stylus</li>
-<li>部署：一句命令即可迅速部署到Github和Heroku</li>
-<li>兼容：兼容Windows，linux以及OSX</li>
-</ul>
+<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; productExceptSelf(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</span><br><span class="line">        <span class="keyword">int</span> len = nums.size();</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ret(len, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; ++i)</span><br><span class="line">            ret[i] = ret[i - <span class="number">1</span>] * nums[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = len - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">            ret[i] *= temp;</span><br><span class="line">            temp *= nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -281,7 +278,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/LeetCode/" rel="tag">#LeetCode</a>
+          
+            <a href="/tags/array/" rel="tag">#array</a>
           
         </div>
       
@@ -290,12 +289,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2015/12/22/Leet2/" rel="next" title="Leet Code 122 Best Time to Buy and Sell Stock II">
+                <i class="fa fa-chevron-left"></i> Leet Code 122 Best Time to Buy and Sell Stock II
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/20/Hexo2/" rel="prev" title="Hexo Note2(Installation)">
-                Hexo Note2(Installation) <i class="fa fa-chevron-right"></i>
+              <a href="/2015/12/22/Hexo6/" rel="prev" title="Hexo Note6(Problems)">
+                Hexo Note6(Problems) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -436,7 +439,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u4EC0_u4E48_u662FHexo"><span class="nav-number">1.</span> <span class="nav-text">什么是Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4E3A_u4EC0_u4E48_u7528Hexo"><span class="nav-number">2.</span> <span class="nav-text">为什么用Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo_u5177_u6709_u4EE5_u4E0B_u4F18_u70B9_uFF1A"><span class="nav-number">2.0.1.</span> <span class="nav-text">Hexo具有以下优点：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u9898_u76EE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u601D_u8DEF"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4EE3_u7801"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
