@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="LeetCode,math," />
 
 
 
@@ -51,24 +51,16 @@
 
 
 
-<meta name="description" content="以下流程针对windows7用户
-安装Git可以到这里获取windows的git安装文件，接着按安装指示来就行了
-安装Node.js下载地址：这里，安装时保持默认配置即可">
+<meta name="description" content="题目There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb (turning on if it’s off or turning of">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo Note2(Installation)">
-<meta property="og:url" content="http://yoursite.com/2015/12/20/Hexo2/index.html">
+<meta property="og:title" content="Leet Code 319 Bulb Switcher">
+<meta property="og:url" content="http://yoursite.com/2015/12/22/Leet7/index.html">
 <meta property="og:site_name" content="Kthsdwwl's Blog">
-<meta property="og:description" content="以下流程针对windows7用户
-安装Git可以到这里获取windows的git安装文件，接着按安装指示来就行了
-安装Node.js下载地址：这里，安装时保持默认配置即可">
-<meta property="og:image" content="http://7xpcjx.com1.z0.glb.clouddn.com/hexo_node.JPG">
-<meta property="og:image" content="http://7xpcjx.com1.z0.glb.clouddn.com/node_install.JPG">
-<meta property="og:updated_time" content="2015-12-20T23:48:58.291Z">
+<meta property="og:description" content="题目There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb (turning on if it’s off or turning of">
+<meta property="og:updated_time" content="2015-12-23T06:20:42.428Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo Note2(Installation)">
-<meta name="twitter:description" content="以下流程针对windows7用户
-安装Git可以到这里获取windows的git安装文件，接着按安装指示来就行了
-安装Node.js下载地址：这里，安装时保持默认配置即可">
+<meta name="twitter:title" content="Leet Code 319 Bulb Switcher">
+<meta name="twitter:description" content="题目There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb (turning on if it’s off or turning of">
 
 
 
@@ -80,7 +72,7 @@
   };
 </script>
 
-  <title> Hexo Note2(Installation) | Kthsdwwl's Blog </title>
+  <title> Leet Code 319 Bulb Switcher | Kthsdwwl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -220,7 +212,7 @@
             
             
               
-                Hexo Note2(Installation)
+                Leet Code 319 Bulb Switcher
               
             
           </h1>
@@ -229,8 +221,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-20T17:15:44-05:00" content="2015-12-20">
-              2015-12-20
+            <time itemprop="dateCreated" datetime="2015-12-22T13:56:54-05:00" content="2015-12-22">
+              2015-12-22
             </time>
           </span>
 
@@ -239,8 +231,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -268,14 +260,15 @@
       
 
       
-        <span itemprop="articleBody"><p>以下流程针对windows7用户</p>
-<h2 id="u5B89_u88C5Git"><a href="#u5B89_u88C5Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>可以到<a href="http://git-for-windows.github.io/" target="_blank" rel="external">这里</a>获取windows的git安装文件，接着按安装指示来就行了</p>
-<h2 id="u5B89_u88C5Node-js"><a href="#u5B89_u88C5Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="external">这里</a>，安装时保持默认配置即可<br><img src="http://7xpcjx.com1.z0.glb.clouddn.com/hexo_node.JPG" alt="node"></p>
+        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb (turning on if it’s off or turning off if it’s on). For the nth round, you only toggle the last bulb. Find how many bulbs are on after n rounds.</p>
+<p>Example:</p>
+<blockquote><p>Given n = 3. </p>
+<p>At first, the three bulbs are [off, off, off].<br>After first round, the three bulbs are [on, on, on].<br>After second round, the three bulbs are [on, off, on].<br>After third round, the three bulbs are [on, off, off]. </p>
+<p>So you should return 1, because there is only one bulb is on.</p>
+</blockquote>
 <a id="more"></a>
-<p>安装完成可以检查是否安装成功：<br><img src="http://7xpcjx.com1.z0.glb.clouddn.com/node_install.JPG" alt="node install"></p>
-<h2 id="u5B89_u88C5Hexo"><a href="#u5B89_u88C5Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>打开Git Bash，输入以下命令：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> hexo</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="u5EFA_u7ACB_u535A_u5BA2"><a href="#u5EFA_u7ACB_u535A_u5BA2" class="headerlink" title="建立博客"></a>建立博客</h2><p>安装完Hexo后，就可以开始创建博客了。首先，选择一个路径并建立一个空文件夹作为存放博客的地方，这里选择了D:\Hexo。接着，在文件夹上右键选择Git Bash，在弹出的命令行中输入以下命令，Hexo将在目标文件夹建立博客相关文件。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init</span><br></pre></td></tr></table></figure><br>接着安装依赖包：<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure><br>做到这一步，就可以在本地查看博客了。输入以下命令，接着打开浏览器，输入localhost:4000即可<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo generate</span><br><span class="line"><span class="variable">$ </span>hexo server</span><br></pre></td></tr></table></figure></p>
-</span>
+<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>拿12号灯泡为例，一开始是on。之后它将会被第2，3，4，6，12轮toggle所影响，状态变为off。因此，对于p号灯泡，最后的状态会受能整除p的因子个数(1除外)影响。因子个数为偶，状态为on；因子个数为奇，状态为off。列出几个序号就会发现，只有平方序号最后的状态为on(比如1，4，9，16…)。因此，给定n，只要找出比n小的最大平方数即可。</p>
+<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">bulbSwitch</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sqrt</span>((<span class="keyword">double</span>)n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
@@ -283,7 +276,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/LeetCode/" rel="tag">#LeetCode</a>
+          
+            <a href="/tags/math/" rel="tag">#math</a>
           
         </div>
       
@@ -292,16 +287,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/20/Hexo1/" rel="next" title="Hexo Note1(Introduction)">
-                <i class="fa fa-chevron-left"></i> Hexo Note1(Introduction)
+              <a href="/2015/12/22/Leet5/" rel="next" title="Leet Code 94 Binary Tree Inorder Traversal">
+                <i class="fa fa-chevron-left"></i> Leet Code 94 Binary Tree Inorder Traversal
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/20/Hexo3/" rel="prev" title="Hexo Note3(Deployment)">
-                Hexo Note3(Deployment) <i class="fa fa-chevron-right"></i>
+              <a href="/2015/12/22/Hexo6/" rel="prev" title="Hexo Note6(Problems)">
+                Hexo Note6(Problems) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -442,7 +437,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u5B89_u88C5Git"><span class="nav-number">1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5B89_u88C5Node-js"><span class="nav-number">2.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5B89_u88C5Hexo"><span class="nav-number">3.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5EFA_u7ACB_u535A_u5BA2"><span class="nav-number">4.</span> <span class="nav-text">建立博客</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u9898_u76EE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u601D_u8DEF"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4EE3_u7801"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
