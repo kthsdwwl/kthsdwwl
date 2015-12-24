@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="LeetCode,array,greedy," />
+  <meta name="keywords" content="LeetCode,linked list,two pointers," />
 
 
 
@@ -51,19 +51,16 @@
 
 
 
-<meta name="description" content="题目Say you have an array for which the ith element is the price of a given stock on day i.
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one">
+<meta name="description" content="题目Given a linked list, determine if it has a cycle in it.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leet Code 122 Best Time to Buy and Sell Stock II">
-<meta property="og:url" content="http://yoursite.com/2015/12/22/Leet2/index.html">
+<meta property="og:title" content="Leet Code 141 Linked List Cycle">
+<meta property="og:url" content="http://yoursite.com/2015/12/22/Leet8/index.html">
 <meta property="og:site_name" content="Kthsdwwl's Blog">
-<meta property="og:description" content="题目Say you have an array for which the ith element is the price of a given stock on day i.
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one">
-<meta property="og:updated_time" content="2015-12-22T20:09:50.301Z">
+<meta property="og:description" content="题目Given a linked list, determine if it has a cycle in it.">
+<meta property="og:updated_time" content="2015-12-23T20:15:26.693Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leet Code 122 Best Time to Buy and Sell Stock II">
-<meta name="twitter:description" content="题目Say you have an array for which the ith element is the price of a given stock on day i.
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one">
+<meta name="twitter:title" content="Leet Code 141 Linked List Cycle">
+<meta name="twitter:description" content="题目Given a linked list, determine if it has a cycle in it.">
 
 
 
@@ -75,7 +72,7 @@ Design an algorithm to find the maximum profit. You may complete as many transac
   };
 </script>
 
-  <title> Leet Code 122 Best Time to Buy and Sell Stock II | Kthsdwwl's Blog </title>
+  <title> Leet Code 141 Linked List Cycle | Kthsdwwl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -215,7 +212,7 @@ Design an algorithm to find the maximum profit. You may complete as many transac
             
             
               
-                Leet Code 122 Best Time to Buy and Sell Stock II
+                Leet Code 141 Linked List Cycle
               
             
           </h1>
@@ -263,12 +260,10 @@ Design an algorithm to find the maximum profit. You may complete as many transac
       
 
       
-        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
-<p>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).</p>
-<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>要想使得profit达到最大，得要在物品最低价的时候买入，并在最高价的时候卖出。因此策略就是遍历序列，只要价格还在降就不买，直到价格开始上涨。</p>
+        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given a linked list, determine if it has a cycle in it.</p>
 <a id="more"></a>
-<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = prices.size();</span><br><span class="line">        <span class="keyword">int</span> profit = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (prices[i] &gt; prices[i - <span class="number">1</span>])</span><br><span class="line">                profit += prices[i] - prices[i - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> profit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</span>
+<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>用两个指针遍历，一个每次移动一个节点，另一个每次移动两个节点。如果有环，两个指针最后会遇到一起。如果没有环，其中一个会遇到链表尾。</p>
+<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">NULL</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        ListNode *p1 = head;</span><br><span class="line">        ListNode *p2 = head;</span><br><span class="line">        <span class="keyword">while</span> (p1 &amp;&amp; p2) &#123;</span><br><span class="line">            p1 = p1-&gt;next;</span><br><span class="line">            <span class="keyword">if</span> (p2-&gt;next) &#123;</span><br><span class="line">                p2 = p2-&gt;next-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                p2 = p2-&gt;next;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (p1 == p2)</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!p1 || !p2) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
@@ -278,9 +273,9 @@ Design an algorithm to find the maximum profit. You may complete as many transac
           
             <a href="/tags/LeetCode/" rel="tag">#LeetCode</a>
           
-            <a href="/tags/array/" rel="tag">#array</a>
+            <a href="/tags/linked-list/" rel="tag">#linked list</a>
           
-            <a href="/tags/greedy/" rel="tag">#greedy</a>
+            <a href="/tags/two-pointers/" rel="tag">#two pointers</a>
           
         </div>
       
@@ -289,16 +284,16 @@ Design an algorithm to find the maximum profit. You may complete as many transac
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/22/Leet3/" rel="next" title="Leet Code 238 Product of Array Except Self">
-                <i class="fa fa-chevron-left"></i> Leet Code 238 Product of Array Except Self
+              <a href="/2015/12/22/Leet2/" rel="next" title="Leet Code 122 Best Time to Buy and Sell Stock II">
+                <i class="fa fa-chevron-left"></i> Leet Code 122 Best Time to Buy and Sell Stock II
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/22/Leet8/" rel="prev" title="Leet Code 141 Linked List Cycle">
-                Leet Code 141 Linked List Cycle <i class="fa fa-chevron-right"></i>
+              <a href="/2015/12/22/Leet4/" rel="prev" title="Leet Code 144 Binary Tree Preorder Traversal">
+                Leet Code 144 Binary Tree Preorder Traversal <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

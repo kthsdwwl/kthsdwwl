@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="LeetCode,array,greedy," />
+  <meta name="keywords" content="LeetCode,bit,string," />
 
 
 
@@ -51,19 +51,16 @@
 
 
 
-<meta name="description" content="题目Say you have an array for which the ith element is the price of a given stock on day i.
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one">
+<meta name="description" content="题目Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. You may assume that each word will contain only lower case le">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leet Code 122 Best Time to Buy and Sell Stock II">
-<meta property="og:url" content="http://yoursite.com/2015/12/22/Leet2/index.html">
+<meta property="og:title" content="Leet Code 141 Linked List Cycle">
+<meta property="og:url" content="http://yoursite.com/2015/12/22/Leet9/index.html">
 <meta property="og:site_name" content="Kthsdwwl's Blog">
-<meta property="og:description" content="题目Say you have an array for which the ith element is the price of a given stock on day i.
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one">
-<meta property="og:updated_time" content="2015-12-22T20:09:50.301Z">
+<meta property="og:description" content="题目Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. You may assume that each word will contain only lower case le">
+<meta property="og:updated_time" content="2015-12-24T01:43:55.630Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leet Code 122 Best Time to Buy and Sell Stock II">
-<meta name="twitter:description" content="题目Say you have an array for which the ith element is the price of a given stock on day i.
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one">
+<meta name="twitter:title" content="Leet Code 141 Linked List Cycle">
+<meta name="twitter:description" content="题目Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. You may assume that each word will contain only lower case le">
 
 
 
@@ -75,7 +72,7 @@ Design an algorithm to find the maximum profit. You may complete as many transac
   };
 </script>
 
-  <title> Leet Code 122 Best Time to Buy and Sell Stock II | Kthsdwwl's Blog </title>
+  <title> Leet Code 141 Linked List Cycle | Kthsdwwl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -215,7 +212,7 @@ Design an algorithm to find the maximum profit. You may complete as many transac
             
             
               
-                Leet Code 122 Best Time to Buy and Sell Stock II
+                Leet Code 141 Linked List Cycle
               
             
           </h1>
@@ -263,12 +260,12 @@ Design an algorithm to find the maximum profit. You may complete as many transac
       
 
       
-        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
-<p>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).</p>
-<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>要想使得profit达到最大，得要在物品最低价的时候买入，并在最高价的时候卖出。因此策略就是遍历序列，只要价格还在降就不买，直到价格开始上涨。</p>
-<a id="more"></a>
-<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = prices.size();</span><br><span class="line">        <span class="keyword">int</span> profit = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (prices[i] &gt; prices[i - <span class="number">1</span>])</span><br><span class="line">                profit += prices[i] - prices[i - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> profit;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</span>
+        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. You may assume that each word will contain only lower case letters. If no such two words exist, return 0.</p>
+<p><strong>Example 1:</strong><br>Given [“abcw”, “baz”, “foo”, “bar”, “xtfn”, “abcdef”]<br>Return 16<br>The two words can be “abcw”, “xtfn”.</p>
+<p><strong>Example 2:</strong><br>Given [“a”, “ab”, “abc”, “d”, “cd”, “bcd”, “abcd”]<br>Return 4<br>The two words can be “ab”, “cd”.</p>
+<p><strong>Example 3:</strong><br>Given [“a”, “aa”, “aaa”, “aaaa”]<br>Return 0<br>No such pair of words.</p>
+<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>这道题重点在于如何找到一种效率比较高的方法，来检测两个字符串是否有重复的字母。一种比较好的方法是讲字符串转换为bit串，每一位代表一种字母。比如，第0位为1，表示字符串中有字母a，为0表示没有字母a。这样一来，只要对两个bit串进行与操作，就能判断是否有相同字母了。</p>
+<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">str2Bit</span><span class="params">(<span class="built_in">string</span> word)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> len = word.length();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">            ret |= (<span class="number">1</span> &lt;&lt; (word[i] - <span class="string">'a'</span>));</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxProduct</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; words)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = words.size();</span><br><span class="line">        <span class="keyword">int</span> *bits = <span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">        <span class="keyword">int</span> maxLen = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">            bits[i] = str2Bit(words[i]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i) &#123;</span><br><span class="line">            <span class="keyword">int</span> a = bits[i];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; len; ++j) &#123;</span><br><span class="line">                <span class="keyword">int</span> b = bits[j];</span><br><span class="line">                <span class="keyword">if</span> (!(a &amp; b)) &#123;</span><br><span class="line">                    <span class="keyword">int</span> lenMul = words[i].length() * words[j].length();</span><br><span class="line">                    <span class="keyword">if</span> (lenMul &gt; maxLen)</span><br><span class="line">                        maxLen = lenMul;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxLen;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
@@ -278,9 +275,9 @@ Design an algorithm to find the maximum profit. You may complete as many transac
           
             <a href="/tags/LeetCode/" rel="tag">#LeetCode</a>
           
-            <a href="/tags/array/" rel="tag">#array</a>
+            <a href="/tags/bit/" rel="tag">#bit</a>
           
-            <a href="/tags/greedy/" rel="tag">#greedy</a>
+            <a href="/tags/string/" rel="tag">#string</a>
           
         </div>
       
@@ -289,16 +286,16 @@ Design an algorithm to find the maximum profit. You may complete as many transac
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/22/Leet3/" rel="next" title="Leet Code 238 Product of Array Except Self">
-                <i class="fa fa-chevron-left"></i> Leet Code 238 Product of Array Except Self
+              <a href="/2015/12/22/Leet7/" rel="next" title="Leet Code 319 Bulb Switcher">
+                <i class="fa fa-chevron-left"></i> Leet Code 319 Bulb Switcher
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/22/Leet8/" rel="prev" title="Leet Code 141 Linked List Cycle">
-                Leet Code 141 Linked List Cycle <i class="fa fa-chevron-right"></i>
+              <a href="/2015/12/22/Hexo6/" rel="prev" title="Hexo Note6(Problems)">
+                Hexo Note6(Problems) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
