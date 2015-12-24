@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="LeetCode,math," />
+  <meta name="keywords" content="LeetCode,math,string," />
 
 
 
@@ -51,16 +51,19 @@
 
 
 
-<meta name="description" content="题目There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb (turning on if it’s off or turning of">
+<meta name="description" content="题目Given an integer, convert it to a roman numeral.
+Input is guaranteed to be within the range from 1 to 3999.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leet Code 319 Bulb Switcher">
-<meta property="og:url" content="http://yoursite.com/2015/12/22/Leet7/index.html">
+<meta property="og:title" content="Leet Code 12 Integer to Roman">
+<meta property="og:url" content="http://yoursite.com/2015/12/24/Leet13/index.html">
 <meta property="og:site_name" content="Kthsdwwl's Blog">
-<meta property="og:description" content="题目There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb (turning on if it’s off or turning of">
-<meta property="og:updated_time" content="2015-12-24T01:45:46.127Z">
+<meta property="og:description" content="题目Given an integer, convert it to a roman numeral.
+Input is guaranteed to be within the range from 1 to 3999.">
+<meta property="og:updated_time" content="2015-12-24T22:58:38.210Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leet Code 319 Bulb Switcher">
-<meta name="twitter:description" content="题目There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb (turning on if it’s off or turning of">
+<meta name="twitter:title" content="Leet Code 12 Integer to Roman">
+<meta name="twitter:description" content="题目Given an integer, convert it to a roman numeral.
+Input is guaranteed to be within the range from 1 to 3999.">
 
 
 
@@ -72,7 +75,7 @@
   };
 </script>
 
-  <title> Leet Code 319 Bulb Switcher | Kthsdwwl's Blog </title>
+  <title> Leet Code 12 Integer to Roman | Kthsdwwl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -212,7 +215,7 @@
             
             
               
-                Leet Code 319 Bulb Switcher
+                Leet Code 12 Integer to Roman
               
             
           </h1>
@@ -221,8 +224,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-22T22:56:54-05:00" content="2015-12-22">
-              2015-12-22
+            <time itemprop="dateCreated" datetime="2015-12-24T17:55:03-05:00" content="2015-12-24">
+              2015-12-24
             </time>
           </span>
 
@@ -260,15 +263,12 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>There are n bulbs that are initially off. You first turn on all the bulbs. Then, you turn off every second bulb. On the third round, you toggle every third bulb (turning on if it’s off or turning off if it’s on). For the nth round, you only toggle the last bulb. Find how many bulbs are on after n rounds.</p>
-<p>Example:</p>
-<blockquote><p>Given n = 3. </p>
-<p>At first, the three bulbs are [off, off, off].<br>After first round, the three bulbs are [on, on, on].<br>After second round, the three bulbs are [on, off, on].<br>After third round, the three bulbs are [on, off, off]. </p>
-<p>So you should return 1, because there is only one bulb is on.</p>
-</blockquote>
+        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given an integer, convert it to a roman numeral.</p>
+<p>Input is guaranteed to be within the range from 1 to 3999.</p>
 <a id="more"></a>
-<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>拿12号灯泡为例，一开始是on。之后它将会被第2，3，4，6，12轮toggle所影响，状态变为off。因此，对于p号灯泡，最后的状态会受能整除p的因子个数(1除外)影响。因子个数为偶，状态为on；因子个数为奇，状态为off。列出几个序号就会发现，只有平方序号最后的状态为on(比如1，4，9，16…)。因此，给定n，只要找出比n小的最大平方数即可。</p>
-<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">bulbSwitch</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sqrt</span>((<span class="keyword">double</span>)n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></span>
+<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>将整数转为罗马数字，整数范围在1到3999之间。基本思路是，给定一个整数，将其千，百，十，个位拆出来分别表示，最后加起来。比如3999=3000+900+90+9，用罗马数字分别表示这几个数，最后连接起来。用字符串数组比string更有效率。</p>
+<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">intToRoman</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span>* digits[<span class="number">10</span>] = &#123;<span class="string">""</span>, <span class="string">"I"</span>, <span class="string">"II"</span>, <span class="string">"III"</span>, <span class="string">"IV"</span>, <span class="string">"V"</span>, <span class="string">"VI"</span>, <span class="string">"VII"</span>, <span class="string">"VIII"</span>, <span class="string">"IX"</span>&#125;;</span><br><span class="line">        <span class="keyword">char</span>* tens[<span class="number">10</span>] = &#123;<span class="string">""</span>, <span class="string">"X"</span>, <span class="string">"XX"</span>, <span class="string">"XXX"</span>, <span class="string">"XL"</span>, <span class="string">"L"</span>, <span class="string">"LX"</span>, <span class="string">"LXX"</span>, <span class="string">"LXXX"</span>, <span class="string">"XC"</span>&#125;;</span><br><span class="line">        <span class="keyword">char</span>* hundreds[<span class="number">10</span>] = &#123;<span class="string">""</span>, <span class="string">"C"</span>, <span class="string">"CC"</span>, <span class="string">"CCC"</span>, <span class="string">"CD"</span>, <span class="string">"D"</span>, <span class="string">"DC"</span>, <span class="string">"DCC"</span>, <span class="string">"DCCC"</span>, <span class="string">"CM"</span>&#125;;</span><br><span class="line">        <span class="keyword">char</span>* thousands[<span class="number">4</span>] = &#123;<span class="string">""</span>, <span class="string">"M"</span>, <span class="string">"MM"</span>, <span class="string">"MMM"</span>&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">char</span> ret[<span class="number">100</span>] = <span class="string">""</span>;</span><br><span class="line">        <span class="built_in">strcat</span>(ret, thousands[num / <span class="number">1000</span>]);</span><br><span class="line">        <span class="built_in">strcat</span>(ret, hundreds[num % <span class="number">1000</span> / <span class="number">100</span>]);</span><br><span class="line">        <span class="built_in">strcat</span>(ret, tens[num % <span class="number">100</span> / <span class="number">10</span>]);</span><br><span class="line">        <span class="built_in">strcat</span>(ret, digits[num % <span class="number">10</span>]);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">string</span>(ret);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</span>
       
     </div>
 
@@ -280,6 +280,8 @@
           
             <a href="/tags/math/" rel="tag">#math</a>
           
+            <a href="/tags/string/" rel="tag">#string</a>
+          
         </div>
       
 
@@ -287,16 +289,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/22/Hexo6/" rel="next" title="Hexo Note6(Problems)">
-                <i class="fa fa-chevron-left"></i> Hexo Note6(Problems)
+              <a href="/2015/12/24/Leet12/" rel="next" title="Leet Code 35 Search Insert Position">
+                <i class="fa fa-chevron-left"></i> Leet Code 35 Search Insert Position
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/23/Leet8/" rel="prev" title="Leet Code 141 Linked List Cycle">
-                Leet Code 141 Linked List Cycle <i class="fa fa-chevron-right"></i>
+              <a href="/2015/12/24/Leet14/" rel="prev" title="Leet Code 13 Roman to Integer">
+                Leet Code 13 Roman to Integer <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
