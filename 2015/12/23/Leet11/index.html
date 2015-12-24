@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="BFS,LeetCode,tree," />
 
 
 
@@ -51,24 +51,18 @@
 
 
 
-<meta name="description" content="我们可以为刚搭建好的博客替换主题，并进行一些个性化的设置。这里我使用了NexT主题。NexT是一个精美而且简约的主题，界面看起来十分干净，没有丝毫多余的杂质。此外，它在Web端及移动端的访问体验都很好。相关的文档可以参考这里    
-博客基本信息在使用NexT主题之前，先对博客的一些基本信息进行设定，比如博客的标题，描述，作者等等。打开_config.yml文件，进行如下修改：1234567# S">
+<meta name="description" content="题目Given a binary tree12345struct TreeLinkNode &amp;#123;  TreeLinkNode *left;  TreeLinkNode *right;  TreeLinkNode *next;&amp;#125;Populate each next pointer to point to its next right node. If there is no nex">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo Note4(Theme)">
-<meta property="og:url" content="http://yoursite.com/2015/12/20/Hexo4/index.html">
+<meta property="og:title" content="Leet Code 116 Populating Next Right Pointers in Each Node">
+<meta property="og:url" content="http://yoursite.com/2015/12/23/Leet11/index.html">
 <meta property="og:site_name" content="Kthsdwwl's Blog">
-<meta property="og:description" content="我们可以为刚搭建好的博客替换主题，并进行一些个性化的设置。这里我使用了NexT主题。NexT是一个精美而且简约的主题，界面看起来十分干净，没有丝毫多余的杂质。此外，它在Web端及移动端的访问体验都很好。相关的文档可以参考这里    
-博客基本信息在使用NexT主题之前，先对博客的一些基本信息进行设定，比如博客的标题，描述，作者等等。打开_config.yml文件，进行如下修改：1234567# S">
-<meta property="og:image" content="http://7xpcjx.com1.z0.glb.clouddn.com/social_btn.JPG">
-<meta property="og:image" content="http://7xpcjx.com1.z0.glb.clouddn.com/about.JPG">
-<meta property="og:image" content="http://7xpcjx.com1.z0.glb.clouddn.com/about_folder.JPG">
-<meta property="og:image" content="http://7xpcjx.com1.z0.glb.clouddn.com/categories.JPG">
-<meta property="og:image" content="http://7xpcjx.com1.z0.glb.clouddn.com/categories_page.JPG">
-<meta property="og:updated_time" content="2015-12-21T03:47:51.443Z">
+<meta property="og:description" content="题目Given a binary tree12345struct TreeLinkNode &amp;#123;  TreeLinkNode *left;  TreeLinkNode *right;  TreeLinkNode *next;&amp;#125;Populate each next pointer to point to its next right node. If there is no nex">
+<meta property="og:image" content="http://7xpcjx.com1.z0.glb.clouddn.com/tree2.JPG">
+<meta property="og:image" content="http://7xpcjx.com1.z0.glb.clouddn.com/result2.JPG">
+<meta property="og:updated_time" content="2015-12-24T03:59:08.634Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo Note4(Theme)">
-<meta name="twitter:description" content="我们可以为刚搭建好的博客替换主题，并进行一些个性化的设置。这里我使用了NexT主题。NexT是一个精美而且简约的主题，界面看起来十分干净，没有丝毫多余的杂质。此外，它在Web端及移动端的访问体验都很好。相关的文档可以参考这里    
-博客基本信息在使用NexT主题之前，先对博客的一些基本信息进行设定，比如博客的标题，描述，作者等等。打开_config.yml文件，进行如下修改：1234567# S">
+<meta name="twitter:title" content="Leet Code 116 Populating Next Right Pointers in Each Node">
+<meta name="twitter:description" content="题目Given a binary tree12345struct TreeLinkNode &amp;#123;  TreeLinkNode *left;  TreeLinkNode *right;  TreeLinkNode *next;&amp;#125;Populate each next pointer to point to its next right node. If there is no nex">
 
 
 
@@ -80,7 +74,7 @@
   };
 </script>
 
-  <title> Hexo Note4(Theme) | Kthsdwwl's Blog </title>
+  <title> Leet Code 116 Populating Next Right Pointers in Each Node | Kthsdwwl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -220,7 +214,7 @@
             
             
               
-                Hexo Note4(Theme)
+                Leet Code 116 Populating Next Right Pointers in Each Node
               
             
           </h1>
@@ -229,8 +223,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-20T21:09:42-05:00" content="2015-12-20">
-              2015-12-20
+            <time itemprop="dateCreated" datetime="2015-12-23T22:47:36-05:00" content="2015-12-23">
+              2015-12-23
             </time>
           </span>
 
@@ -239,8 +233,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -268,19 +262,16 @@
       
 
       
-        <span itemprop="articleBody"><p>我们可以为刚搭建好的博客替换主题，并进行一些个性化的设置。这里我使用了NexT主题。NexT是一个精美而且简约的主题，界面看起来十分干净，没有丝毫多余的杂质。此外，它在Web端及移动端的访问体验都很好。相关的文档可以参考<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">这里</a>    </p>
-<h2 id="u535A_u5BA2_u57FA_u672C_u4FE1_u606F"><a href="#u535A_u5BA2_u57FA_u672C_u4FE1_u606F" class="headerlink" title="博客基本信息"></a>博客基本信息</h2><p>在使用NexT主题之前，先对博客的一些基本信息进行设定，比如博客的标题，描述，作者等等。打开_config.yml文件，进行如下修改：<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line">title: Kthsdwwl's Blog</span><br><span class="line"><span class="title">subtitle: </span></span><br><span class="line">description: A graduate student in CMU</span><br><span class="line">author: kthsdwwl</span><br><span class="line">language: zh-Hans</span><br><span class="line"><span class="title">timezone:</span></span><br></pre></td></tr></table></figure><br>根据具体情况对这些域进行设定，其他地方保留原样即可。</p>
+        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given a binary tree<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> TreeLinkNode &#123;</span><br><span class="line">  TreeLinkNode *left;</span><br><span class="line">  TreeLinkNode *right;</span><br><span class="line">  TreeLinkNode *next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.</p>
 <a id="more"></a>
-<h2 id="u4E0B_u8F7D_u53CA_u5B89_u88C5"><a href="#u4E0B_u8F7D_u53CA_u5B89_u88C5" class="headerlink" title="下载及安装"></a>下载及安装</h2><p>和之前的步骤一样，首先选定博客目录，右键选择Git Bash，弹出Git命令行。接着输入以下命令：<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iissnan/hexo-theme-<span class="keyword">next</span> themes/<span class="keyword">next</span></span><br></pre></td></tr></table></figure><br>之后进入_config.yml文件，将theme设定为next：<br><figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">theme</span>: <span class="string">next</span></span><br></pre></td></tr></table></figure></p>
-<p>这时候重新运行hexo服务器，就可以看到崭新的界面了。</p>
-<h2 id="u5176_u4ED6_u8BBE_u5B9A"><a href="#u5176_u4ED6_u8BBE_u5B9A" class="headerlink" title="其他设定"></a>其他设定</h2><p>安装好新的主题后我们可以进行一些其他方面的个性化设定，例如头像，菜单，社交网站链接。对于这些方面的设定，我们需要改动themes/next/_config.yml文件，而不是博客根目录下的那个_config.yml文件。</p>
-<h3 id="u5934_u50CF"><a href="#u5934_u50CF" class="headerlink" title="头像"></a>头像</h3><p>首先在source文件夹下新建一个images文件夹用于存放图片。接着选择头像文件，将其移到images文件夹下。准备好文件后，进入_config.yml文件，添加以下语句：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">avatar:</span> <span class="regexp">/images/</span>avatar.jpg</span><br></pre></td></tr></table></figure></p>
-<h3 id="u793E_u4EA4_u6309_u94AE"><a href="#u793E_u4EA4_u6309_u94AE" class="headerlink" title="社交按钮"></a>社交按钮</h3><p>我们可以在个人信息下添加社交网站的链接：</p>
-<p><img src="http://7xpcjx.com1.z0.glb.clouddn.com/social_btn.JPG" alt="social_btn"></p>
-<p>只需要在设定文件中添加如下语句即可<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Social links</span></span><br><span class="line"><span class="symbol">social:</span></span><br><span class="line">  <span class="symbol">github:</span> <span class="symbol">https:</span>/<span class="regexp">/github.com/kthsdwwl</span></span><br><span class="line">  <span class="symbol">douban:</span> <span class="symbol">https:</span>/<span class="regexp">/www.zhihu.com/people</span><span class="regexp">/seed-lin</span><br><span class="line">  linkin: https:/</span><span class="regexp">/www.linkedin.com/profile</span><span class="regexp">/view?id=AAIAABI_czkB0Cf_cMUHdzNSCew5xeyIR-GEwbI&amp;trk=nav_responsive_tab_profile_pic</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="u5173_u4E8E_u9875_u9762"><a href="#u5173_u4E8E_u9875_u9762" class="headerlink" title="关于页面"></a>关于页面</h3><p><img src="http://7xpcjx.com1.z0.glb.clouddn.com/about.JPG" alt="about"><br>要添加关于页面，首先要在菜单中添加关于页面的入口。在设定文件中的menu类别下添加about：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">menu</span>:</span><br><span class="line">  <span class="attribute">home</span>: /</span><br><span class="line">  <span class="attribute">archives</span>: /archives</span><br><span class="line">  <span class="attribute">about</span>: /about</span><br></pre></td></tr></table></figure><br>接着建立about页面。在命令行中输入：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"about"</span></span><br></pre></td></tr></table></figure><br>我们可以看到source目录下多了一个about文件夹：<br><img src="http://7xpcjx.com1.z0.glb.clouddn.com/about_folder.JPG" alt="about_folder"><br>打开about目录下的index.md，即可进行关于页面的内容编辑。</p>
-<h3 id="u5206_u7C7B_u9875_u9762"><a href="#u5206_u7C7B_u9875_u9762" class="headerlink" title="分类页面"></a>分类页面</h3><p>首先在菜单中添加分类页面的入口：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">menu</span>:</span><br><span class="line">  <span class="attribute">home</span>: /</span><br><span class="line">  <span class="attribute">categories</span>: /categories</span><br><span class="line">  <span class="attribute">archives</span>: /archives</span><br><span class="line">  <span class="attribute">about</span>: /about</span><br></pre></td></tr></table></figure><br>接着建立about页面。在命令行中输入：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> page <span class="string">"categories"</span></span><br></pre></td></tr></table></figure><br>打开source/categories/index.md，将type设定为categories。这样，只要博文中有设定category属性，都将被自动分类并显示于这个页面。如果不希望分类页面显示回复，将comments设为false：<br><img src="http://7xpcjx.com1.z0.glb.clouddn.com/categories.JPG" alt="catogories"><br>分类页面样例：<br><img src="http://7xpcjx.com1.z0.glb.clouddn.com/categories_page.JPG" alt="categories_page"></p>
-<h3 id="u6807_u7B7E_u9875_u9762"><a href="#u6807_u7B7E_u9875_u9762" class="headerlink" title="标签页面"></a>标签页面</h3><p>首先在菜单中添加标签页面的入口：<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">menu</span>:</span><br><span class="line">  <span class="attribute">home</span>: /</span><br><span class="line">  <span class="attribute">categories</span>: /categories</span><br><span class="line">  <span class="attribute">archives</span>: /archives</span><br><span class="line">  <span class="attribute">tags</span>: /tags</span><br><span class="line">  <span class="attribute">about</span>: /about</span><br></pre></td></tr></table></figure><br>其余部分与分类页面类似</p>
+<p>Initially, all next pointers are set to NULL.</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>You may only use constant extra space.</li>
+<li>You may assume that it is a perfect binary tree (ie, all leaves are at the same level, and every parent has two children).<br>For example,<br>Given the following perfect binary tree,<br><img src="http://7xpcjx.com1.z0.glb.clouddn.com/tree2.JPG" alt="tree_sample"><br>After calling your function, the tree should look like:<br><img src="http://7xpcjx.com1.z0.glb.clouddn.com/result2.JPG" alt="result"></li>
+</ul>
+<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>目标是将完全二叉树的每一层节点连接起来。基本思路就是利用队列进行BF，并把每一层的节点依次连接。判断某个节点是否属于某一层，只要记录每个节点的序号，并判断是否在这一层的序号范围内即可。比如通过2号，3号节点的序号可以判断他们属于第二层。</p>
+<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">connect</span><span class="params">(TreeLinkNode *root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> idx = <span class="number">1</span>, total = <span class="number">2</span>;</span><br><span class="line">        <span class="built_in">queue</span>&lt;TreeLinkNode *&gt; q;</span><br><span class="line">        <span class="keyword">if</span> (root) q.push(root);</span><br><span class="line">        <span class="keyword">while</span> (!q.empty()) &#123;</span><br><span class="line">            TreeLinkNode *topNode = q.front();</span><br><span class="line">            q.pop();</span><br><span class="line">            <span class="keyword">if</span> (idx == total - <span class="number">1</span>) &#123;</span><br><span class="line">                topNode-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">                total *= <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                topNode-&gt;next = q.front();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (topNode-&gt;left)</span><br><span class="line">                q.push(topNode-&gt;left);</span><br><span class="line">            <span class="keyword">if</span> (topNode-&gt;right)</span><br><span class="line">                q.push(topNode-&gt;right);</span><br><span class="line">            ++idx;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -289,7 +280,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/BFS/" rel="tag">#BFS</a>
+          
+            <a href="/tags/LeetCode/" rel="tag">#LeetCode</a>
+          
+            <a href="/tags/tree/" rel="tag">#tree</a>
           
         </div>
       
@@ -298,17 +293,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/20/Hexo3/" rel="next" title="Hexo Note3(Deployment)">
-                <i class="fa fa-chevron-left"></i> Hexo Note3(Deployment)
+              <a href="/2015/12/23/Leet10/" rel="next" title="Leet Code 96 Unique Binary Search Trees">
+                <i class="fa fa-chevron-left"></i> Leet Code 96 Unique Binary Search Trees
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/20/Hexo5/" rel="prev" title="Hexo Note5(New Post)">
-                Hexo Note5(New Post) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -448,7 +439,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u535A_u5BA2_u57FA_u672C_u4FE1_u606F"><span class="nav-number">1.</span> <span class="nav-text">博客基本信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4E0B_u8F7D_u53CA_u5B89_u88C5"><span class="nav-number">2.</span> <span class="nav-text">下载及安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5176_u4ED6_u8BBE_u5B9A"><span class="nav-number">3.</span> <span class="nav-text">其他设定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5934_u50CF"><span class="nav-number">3.1.</span> <span class="nav-text">头像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u793E_u4EA4_u6309_u94AE"><span class="nav-number">3.2.</span> <span class="nav-text">社交按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5173_u4E8E_u9875_u9762"><span class="nav-number">3.3.</span> <span class="nav-text">关于页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5206_u7C7B_u9875_u9762"><span class="nav-number">3.4.</span> <span class="nav-text">分类页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6807_u7B7E_u9875_u9762"><span class="nav-number">3.5.</span> <span class="nav-text">标签页面</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u9898_u76EE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u601D_u8DEF"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4EE3_u7801"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
