@@ -220,8 +220,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/12/22/Hexo6/" itemprop="url">
-                  Hexo Note6(Problems)
+                <a class="post-title-link" href="/2015/12/23/Leet9/" itemprop="url">
+                  Leet Code 141 Linked List Cycle
                 </a>
               
             
@@ -231,8 +231,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-22T15:01:07-05:00" content="2015-12-22">
-              2015-12-22
+            <time itemprop="dateCreated" datetime="2015-12-23T20:56:54-05:00" content="2015-12-23">
+              2015-12-23
             </time>
           </span>
 
@@ -241,8 +241,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -271,10 +271,10 @@
 
       
         
-          <p>记录遇到的问题</p>
-<h2 id="u4EE3_u7801_u7F29_u8FDB"><a href="#u4EE3_u7801_u7F29_u8FDB" class="headerlink" title="代码缩进"></a>代码缩进</h2><p>由于写代码一直是用tab缩进，在网页中查看粘贴上去的代码，行首总是缩进8个空格，十分烦恼。谷歌百度貌似也没人回答这个问题。最后对_config.yml中的tab_replace进行修改，总算是解决了<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">highlight</span>:</span><br><span class="line">  <span class="attribute">enable</span>: true</span><br><span class="line">  <span class="attribute">line_number</span>: true</span><br><span class="line">  <span class="attribute">auto_detect</span>: true</span><br><span class="line">  <span class="attribute">tab_replace</span>: <span class="string">"    "</span></span><br></pre></td></tr></table></figure></p>
+          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. You may assume that each word will contain only lower case letters. If no such two words exist, return 0.</p>
+<p><strong>Example 1:</strong><br>Given [“abcw”, “baz”, “foo”, “bar”, “xtfn”, “abcdef”]<br>Return 16<br>The two words can be “abcw”, “xtfn”.</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/22/Hexo6/#more" rel="contents">
+            <a class="btn" href="/2015/12/23/Leet9/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -317,7 +317,7 @@
             
               
                 
-                <a class="post-title-link" href="/2015/12/22/Leet9/" itemprop="url">
+                <a class="post-title-link" href="/2015/12/23/Leet8/" itemprop="url">
                   Leet Code 141 Linked List Cycle
                 </a>
               
@@ -328,8 +328,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-22T13:56:54-05:00" content="2015-12-22">
-              2015-12-22
+            <time itemprop="dateCreated" datetime="2015-12-23T15:56:54-05:00" content="2015-12-23">
+              2015-12-23
             </time>
           </span>
 
@@ -368,16 +368,12 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given a string array words, find the maximum value of length(word[i]) * length(word[j]) where the two words do not share common letters. You may assume that each word will contain only lower case letters. If no such two words exist, return 0.</p>
-<p><strong>Example 1:</strong><br>Given [“abcw”, “baz”, “foo”, “bar”, “xtfn”, “abcdef”]<br>Return 16<br>The two words can be “abcw”, “xtfn”.</p>
-<p><strong>Example 2:</strong><br>Given [“a”, “ab”, “abc”, “d”, “cd”, “bcd”, “abcd”]<br>Return 4<br>The two words can be “ab”, “cd”.</p>
-<p><strong>Example 3:</strong><br>Given [“a”, “aa”, “aaa”, “aaaa”]<br>Return 0<br>No such pair of words.</p>
-<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>这道题重点在于如何找到一种效率比较高的方法，来检测两个字符串是否有重复的字母。一种比较好的方法是讲字符串转换为bit串，每一位代表一种字母。比如，第0位为1，表示字符串中有字母a，为0表示没有字母a。这样一来，只要对两个bit串进行与操作，就能判断是否有相同字母了。</p>
-<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">str2Bit</span><span class="params">(<span class="built_in">string</span> word)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> len = word.length();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">            ret |= (<span class="number">1</span> &lt;&lt; (word[i] - <span class="string">'a'</span>));</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxProduct</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; words)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = words.size();</span><br><span class="line">        <span class="keyword">int</span> *bits = <span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">        <span class="keyword">int</span> maxLen = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i)</span><br><span class="line">            bits[i] = str2Bit(words[i]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i) &#123;</span><br><span class="line">            <span class="keyword">int</span> a = bits[i];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; len; ++j) &#123;</span><br><span class="line">                <span class="keyword">int</span> b = bits[j];</span><br><span class="line">                <span class="keyword">if</span> (!(a &amp; b)) &#123;</span><br><span class="line">                    <span class="keyword">int</span> lenMul = words[i].length() * words[j].length();</span><br><span class="line">                    <span class="keyword">if</span> (lenMul &gt; maxLen)</span><br><span class="line">                        maxLen = lenMul;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> maxLen;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-            
-          </span>
+          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given a linked list, determine if it has a cycle in it.</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/23/Leet8/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -428,7 +424,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-22T13:56:54-05:00" content="2015-12-22">
+            <time itemprop="dateCreated" datetime="2015-12-22T22:56:54-05:00" content="2015-12-22">
               2015-12-22
             </time>
           </span>
@@ -518,8 +514,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/12/22/Leet6/" itemprop="url">
-                  Leet Code 268 Missing Number
+                <a class="post-title-link" href="/2015/12/22/Hexo6/" itemprop="url">
+                  Hexo Note6(Problems)
                 </a>
               
             
@@ -529,7 +525,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-22T13:56:54-05:00" content="2015-12-22">
+            <time itemprop="dateCreated" datetime="2015-12-22T15:01:07-05:00" content="2015-12-22">
               2015-12-22
             </time>
           </span>
@@ -539,8 +535,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
                   </a>
                 </span>
 
@@ -569,11 +565,10 @@
 
       
         
-          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given an array containing n distinct numbers taken from 0, 1, 2, …, n, find the one that is missing from the array.</p>
-<p>For example,<br>Given nums = [0, 1, 3] return 2.</p>
-<p><strong>Note:</strong><br>Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?</p>
+          <p>记录遇到的问题</p>
+<h2 id="u4EE3_u7801_u7F29_u8FDB"><a href="#u4EE3_u7801_u7F29_u8FDB" class="headerlink" title="代码缩进"></a>代码缩进</h2><p>由于写代码一直是用tab缩进，在网页中查看粘贴上去的代码，行首总是缩进8个空格，十分烦恼。谷歌百度貌似也没人回答这个问题。最后对_config.yml中的tab_replace进行修改，总算是解决了<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">highlight</span>:</span><br><span class="line">  <span class="attribute">enable</span>: true</span><br><span class="line">  <span class="attribute">line_number</span>: true</span><br><span class="line">  <span class="attribute">auto_detect</span>: true</span><br><span class="line">  <span class="attribute">tab_replace</span>: <span class="string">"    "</span></span><br></pre></td></tr></table></figure></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/22/Leet6/#more" rel="contents">
+            <a class="btn" href="/2015/12/22/Hexo6/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -814,8 +809,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/12/22/Leet8/" itemprop="url">
-                  Leet Code 141 Linked List Cycle
+                <a class="post-title-link" href="/2015/12/22/Leet3/" itemprop="url">
+                  Leet Code 238 Product of Array Except Self
                 </a>
               
             
@@ -865,9 +860,13 @@
 
       
         
-          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given a linked list, determine if it has a cycle in it.</p>
+          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given an array of n integers where n &gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].</p>
+<p>Solve it without division and in O(n).</p>
+<p>For example, given [1,2,3,4], return [24,12,8,6].</p>
+<p><strong>Follow up:</strong><br>Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)</p>
+<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>要在O(n)时间里完成计算，本可以先用一个pass计算出所有数的综合，接着用第二个pass依次除每个数来得到结果，但题目限制了除法的使用，因此得另找门路。这里使用的方法是对于每个元素，将数组分成左边和右边两部分，依次计算再乘起来。做法是先用一个pass，计算出对于每个元素，它左边所有元素的积；接着用第二个pass，从右至左遍历数组，将之前算的每个积乘上元素右边的元素积。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/22/Leet8/#more" rel="contents">
+            <a class="btn" href="/2015/12/22/Leet3/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1008,8 +1007,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/12/22/Leet3/" itemprop="url">
-                  Leet Code 238 Product of Array Except Self
+                <a class="post-title-link" href="/2015/12/22/Leet6/" itemprop="url">
+                  Leet Code 268 Missing Number
                 </a>
               
             
@@ -1059,13 +1058,11 @@
 
       
         
-          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given an array of n integers where n &gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].</p>
-<p>Solve it without division and in O(n).</p>
-<p>For example, given [1,2,3,4], return [24,12,8,6].</p>
-<p><strong>Follow up:</strong><br>Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)</p>
-<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>要在O(n)时间里完成计算，本可以先用一个pass计算出所有数的综合，接着用第二个pass依次除每个数来得到结果，但题目限制了除法的使用，因此得另找门路。这里使用的方法是对于每个元素，将数组分成左边和右边两部分，依次计算再乘起来。做法是先用一个pass，计算出对于每个元素，它左边所有元素的积；接着用第二个pass，从右至左遍历数组，将之前算的每个积乘上元素右边的元素积。</p>
+          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given an array containing n distinct numbers taken from 0, 1, 2, …, n, find the one that is missing from the array.</p>
+<p>For example,<br>Given nums = [0, 1, 3] return 2.</p>
+<p><strong>Note:</strong><br>Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/22/Leet3/#more" rel="contents">
+            <a class="btn" href="/2015/12/22/Leet6/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
