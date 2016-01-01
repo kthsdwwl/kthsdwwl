@@ -197,6 +197,108 @@
 
     
     
+      
+      
+
+      
+    
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/24/Leet12/" itemprop="url">
+                  Leet Code 35 Search Insert Position
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-24T15:28:21-05:00" content="2015-12-24">
+              2015-12-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</p>
+<p>You may assume no duplicates in the array.</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/24/Leet12/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -804,8 +906,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/12/22/Leet6/" itemprop="url">
-                  Leet Code 268 Missing Number
+                <a class="post-title-link" href="/2015/12/22/Leet5/" itemprop="url">
+                  Leet Code 94 Binary Tree Inorder Traversal
                 </a>
               
             
@@ -855,11 +957,12 @@
 
       
         
-          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given an array containing n distinct numbers taken from 0, 1, 2, …, n, find the one that is missing from the array.</p>
-<p>For example,<br>Given nums = [0, 1, 3] return 2.</p>
-<p><strong>Note:</strong><br>Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?</p>
+          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given a binary tree, return the inorder traversal of its nodes’ values.</p>
+<p>For example:<br>Given binary tree {1,#,2,3},<br><blockquote><p>1<br>   \<br>    2<br>   /<br>  3</p>
+</blockquote><br>return [1,3,2].</p>
+<p><strong>Note:</strong> Recursive solution is trivial, could you do it iteratively?</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/22/Leet6/#more" rel="contents">
+            <a class="btn" href="/2015/12/22/Leet5/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -902,8 +1005,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/12/22/Leet3/" itemprop="url">
-                  Leet Code 238 Product of Array Except Self
+                <a class="post-title-link" href="/2015/12/22/Leet2/" itemprop="url">
+                  Leet Code 122 Best Time to Buy and Sell Stock II
                 </a>
               
             
@@ -953,13 +1056,11 @@
 
       
         
-          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Given an array of n integers where n &gt; 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].</p>
-<p>Solve it without division and in O(n).</p>
-<p>For example, given [1,2,3,4], return [24,12,8,6].</p>
-<p><strong>Follow up:</strong><br>Could you solve it with constant space complexity? (Note: The output array does not count as extra space for the purpose of space complexity analysis.)</p>
-<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>要在O(n)时间里完成计算，本可以先用一个pass计算出所有数的综合，接着用第二个pass依次除每个数来得到结果，但题目限制了除法的使用，因此得另找门路。这里使用的方法是对于每个元素，将数组分成左边和右边两部分，依次计算再乘起来。做法是先用一个pass，计算出对于每个元素，它左边所有元素的积；接着用第二个pass，从右至左遍历数组，将之前算的每个积乘上元素右边的元素积。</p>
+          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+<p>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).</p>
+<h2 id="u601D_u8DEF1"><a href="#u601D_u8DEF1" class="headerlink" title="思路1"></a>思路1</h2><p>要想使得profit达到最大，得要在物品最低价的时候买入，并在最高价的时候卖出。因此策略就是遍历序列，只要价格还在降就不买，直到价格开始上涨。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/22/Leet3/#more" rel="contents">
+            <a class="btn" href="/2015/12/22/Leet2/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1080,104 +1181,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/22/Leet2/" itemprop="url">
-                  Leet Code 122 Best Time to Buy and Sell Stock II
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-22T13:56:54-05:00" content="2015-12-22">
-              2015-12-22
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
-<p>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).</p>
-<h2 id="u601D_u8DEF1"><a href="#u601D_u8DEF1" class="headerlink" title="思路1"></a>思路1</h2><p>要想使得profit达到最大，得要在物品最低价的时候买入，并在最高价的时候卖出。因此策略就是遍历序列，只要价格还在降就不买，直到价格开始上涨。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/22/Leet2/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1224,21 +1227,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">37</span>
+              <span class="site-state-item-count">38</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -1299,8 +1302,8 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2015</span>
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>
