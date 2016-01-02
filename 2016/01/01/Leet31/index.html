@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="LeetCode,array,backtracking," />
 
 
 
@@ -51,16 +51,19 @@
 
 
 
-<meta name="description" content="A graduate student in CMU">
+<meta name="description" content="题目Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Ensure that numbers wit">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leet31">
+<meta property="og:title" content="Leet Code 216 Combination Sum III">
 <meta property="og:url" content="http://yoursite.com/2016/01/01/Leet31/index.html">
 <meta property="og:site_name" content="Kthsdwwl's Blog">
-<meta property="og:description" content="A graduate student in CMU">
-<meta property="og:updated_time" content="2016-01-01T20:29:39.588Z">
+<meta property="og:description" content="题目Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Ensure that numbers wit">
+<meta property="og:updated_time" content="2016-01-02T02:07:09.046Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leet31">
-<meta name="twitter:description" content="A graduate student in CMU">
+<meta name="twitter:title" content="Leet Code 216 Combination Sum III">
+<meta name="twitter:description" content="题目Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+Ensure that numbers wit">
 
 
 
@@ -72,7 +75,7 @@
   };
 </script>
 
-  <title> Leet31 | Kthsdwwl's Blog </title>
+  <title> Leet Code 216 Combination Sum III | Kthsdwwl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -233,7 +236,7 @@
             
             
               
-                Leet31
+                Leet Code 216 Combination Sum III
               
             
           </h1>
@@ -247,6 +250,21 @@
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -266,11 +284,35 @@
       
 
       
-        <span itemprop="articleBody"></span>
+        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.</p>
+<p>Ensure that numbers within the set are sorted in ascending order.</p>
+<p><strong>Example 1:</strong></p>
+<p>Input: k = 3, n = 7</p>
+<p>Output:</p>
+<blockquote><p>[[1,2,4]]</p>
+</blockquote>
+<p><strong>Example 2:</strong></p>
+<p>Input: k = 3, n = 9</p>
+<p>Output:</p>
+<blockquote><p>[[1,2,6], [1,3,5], [2,3,4]]</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>给定一个整数k和整数n，找出所有的k个数组合，这k个数的和等于n。k个数得要在1到9范围内。使用递归来做，对于递归中的每一层，为组合增加一个数，直到递归到k等于0，这时候我们就找到了一组组合。</p>
+<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">helper</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; &amp;result, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp, <span class="keyword">int</span> k, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (k == <span class="number">0</span>) &#123; </span><br><span class="line">            <span class="keyword">if</span> (n == <span class="number">0</span>) result.push_back(temp);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> len = temp.size();</span><br><span class="line">        <span class="keyword">int</span> curLargest = (len == <span class="number">0</span> ? <span class="number">0</span> : temp[len - <span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = curLargest + <span class="number">1</span>; i &lt;= n &amp;&amp; i &lt;= <span class="number">9</span>; ++i) &#123;</span><br><span class="line">            temp.push_back(i);</span><br><span class="line">            helper(result, temp, k - <span class="number">1</span>, n - i);</span><br><span class="line">            temp.erase(temp.end() - <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; combinationSum3(<span class="keyword">int</span> k, <span class="keyword">int</span> n) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; ret;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; temp;</span><br><span class="line">        helper(ret, temp, k, n);</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LeetCode/" rel="tag">#LeetCode</a>
+          
+            <a href="/tags/array/" rel="tag">#array</a>
+          
+            <a href="/tags/backtracking/" rel="tag">#backtracking</a>
+          
+        </div>
       
 
       
@@ -284,6 +326,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/01/Leet32/" rel="prev" title="Leet Code 74 Search a 2D Matrix">
+                Leet Code 74 Search a 2D Matrix <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -351,7 +397,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">39</span>
+              <span class="site-state-item-count">40</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -423,7 +469,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u9898_u76EE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u601D_u8DEF"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4EE3_u7801"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

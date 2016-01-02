@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="node.js," />
+  <meta name="keywords" content="LeetCode,array,binary search," />
 
 
 
@@ -51,19 +51,19 @@
 
 
 
-<meta name="description" content="第一个node程序新建一个文本文件，命名为hello.js:1console.log(&quot;Hello world!&quot;);">
+<meta name="description" content="题目Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+Integers in each row are sorted from left to right.The first integer of each row">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.js Note 1">
-<meta property="og:url" content="http://yoursite.com/2015/12/27/Node1/index.html">
+<meta property="og:title" content="Leet Code 74 Search a 2D Matrix">
+<meta property="og:url" content="http://yoursite.com/2016/01/01/Leet32/index.html">
 <meta property="og:site_name" content="Kthsdwwl's Blog">
-<meta property="og:description" content="第一个node程序新建一个文本文件，命名为hello.js:1console.log(&quot;Hello world!&quot;);">
-<meta property="og:image" content="http://7xpcjx.com1.z0.glb.clouddn.com/node.JPG">
-<meta property="og:image" content="http://7xpcjx.com1.z0.glb.clouddn.com/repl.JPG">
-<meta property="og:image" content="http://7xpcjx.com1.z0.glb.clouddn.com/node_server.JPG">
-<meta property="og:updated_time" content="2015-12-27T22:34:54.070Z">
+<meta property="og:description" content="题目Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+Integers in each row are sorted from left to right.The first integer of each row">
+<meta property="og:updated_time" content="2016-01-02T02:13:23.437Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node.js Note 1">
-<meta name="twitter:description" content="第一个node程序新建一个文本文件，命名为hello.js:1console.log(&quot;Hello world!&quot;);">
+<meta name="twitter:title" content="Leet Code 74 Search a 2D Matrix">
+<meta name="twitter:description" content="题目Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+Integers in each row are sorted from left to right.The first integer of each row">
 
 
 
@@ -75,7 +75,7 @@
   };
 </script>
 
-  <title> Node.js Note 1 | Kthsdwwl's Blog </title>
+  <title> Leet Code 74 Search a 2D Matrix | Kthsdwwl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -236,7 +236,7 @@
             
             
               
-                Node.js Note 1
+                Leet Code 74 Search a 2D Matrix
               
             
           </h1>
@@ -245,8 +245,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-27T14:57:16-05:00" content="2015-12-27">
-              2015-12-27
+            <time itemprop="dateCreated" datetime="2016-01-01T20:32:41-05:00" content="2016-01-01">
+              2016-01-01
             </time>
           </span>
 
@@ -255,8 +255,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/node-js/" itemprop="url" rel="index">
-                    <span itemprop="name">node.js</span>
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -284,17 +284,15 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="u7B2C_u4E00_u4E2Anode_u7A0B_u5E8F"><a href="#u7B2C_u4E00_u4E2Anode_u7A0B_u5E8F" class="headerlink" title="第一个node程序"></a>第一个node程序</h2><p>新建一个文本文件，命名为hello.js:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.<span class="command">log</span>(<span class="string">"Hello world!"</span>);</span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:</p>
+<p>Integers in each row are sorted from left to right.<br>The first integer of each row is greater than the last integer of the previous row.<br>For example,</p>
+<p>Consider the following matrix:</p>
+<blockquote><p>[<br>  [1,   3,  5,  7],<br>  [10, 11, 16, 20],<br>  [23, 30, 34, 50]<br>]</p>
+</blockquote>
+<p>Given target = 3, return true.</p>
 <a id="more"></a>
-<p>打开控制台，进入程序所在文件夹，输入命令：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">node</span><span class="identifier"> </span><span class="title">hello</span>.js</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><img src="http://7xpcjx.com1.z0.glb.clouddn.com/node.JPG" alt="node"></p>
-<h2 id="Node_u547D_u4EE4"><a href="#Node_u547D_u4EE4" class="headerlink" title="Node命令"></a>Node命令</h2><p>打开控制台，输入node –help可以看到详细帮助信息：<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">$ node -h</span><br><span class="line">Usage: node [options] [ -e script | script.js ] [arguments]</span><br><span class="line">       node debug script.js [arguments]</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -v, <span class="comment">--version         print Node.js version</span></span><br><span class="line">  -e, <span class="comment">--eval script     evaluate script</span></span><br><span class="line">  -p, <span class="comment">--print           evaluate script and print result</span></span><br><span class="line">  -c, <span class="comment">--check           syntax check script without executing</span></span><br><span class="line">  -i, <span class="comment">--interactive     always enter the REPL even if stdin</span></span><br><span class="line">                        does <span class="operator">not</span> appear <span class="built_in">to</span> be <span class="operator">a</span> terminal</span><br><span class="line">  -r, <span class="comment">--require         module to preload (option can be repeated)</span></span><br><span class="line">  <span class="comment">--no-deprecation      silence deprecation warnings</span></span><br><span class="line">  <span class="comment">--throw-deprecation   throw an exception anytime a deprecated function is used</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">--trace-deprecation   show stack traces on deprecations</span></span><br><span class="line">  <span class="comment">--trace-sync-io       show stack trace when use of sync IO</span></span><br><span class="line">                        is detected <span class="keyword">after</span> <span class="operator">the</span> <span class="keyword">first</span> <span class="built_in">tick</span></span><br><span class="line">  <span class="comment">--track-heap-objects  track heap object allocations for heap snapshots</span></span><br><span class="line">  <span class="comment">--v8-options          print v8 command line options</span></span><br><span class="line">  <span class="comment">--tls-cipher-list=val use an alternative default TLS cipher list</span></span><br><span class="line">  <span class="comment">--icu-data-dir=dir    set ICU data load path to dir</span></span><br><span class="line">                        (overrides NODE_ICU_DATA)</span><br><span class="line"></span><br><span class="line">Environment variables:</span><br><span class="line">NODE_PATH               <span class="string">';'</span>-separated list <span class="operator">of</span> <span class="built_in">directories</span></span><br><span class="line">                        prefixed <span class="built_in">to</span> <span class="operator">the</span> module search path.</span><br><span class="line">NODE_DISABLE_COLORS     <span class="built_in">set</span> <span class="built_in">to</span> <span class="number">1</span> <span class="built_in">to</span> disable colors <span class="operator">in</span> <span class="operator">the</span> REPL</span><br><span class="line">NODE_ICU_DATA           data path <span class="keyword">for</span> ICU (Intl object) data</span><br><span class="line">NODE_REPL_HISTORY       path <span class="built_in">to</span> <span class="operator">the</span> persistent REPL history <span class="built_in">file</span></span><br><span class="line"></span><br><span class="line">Documentation can be found <span class="keyword">at</span> <span class="keyword">https</span>://nodejs.org/</span><br></pre></td></tr></table></figure></p>
-<h2 id="REPL_u6A21_u5F0F"><a href="#REPL_u6A21_u5F0F" class="headerlink" title="REPL模式"></a>REPL模式</h2><p>和python一样，node可以进入REPL(read-eval-print-loop)模式，也就是即时求值运行环境。该环境能让你很方便地执行一些简单的node语句，测试某些包的可用性，单独调用程序的某一个模块，等等。在控制台中输入node即可进入该交互式环境，控制台将会显示“&gt;”来提示用户输入语句，输入命令并按回车，node将会解析并执行语句：<br><img src="http://7xpcjx.com1.z0.glb.clouddn.com/repl.JPG" alt="repl"></p>
-<h2 id="u7B2C_u4E00_u4E2A_u670D_u52A1_u5668"><a href="#u7B2C_u4E00_u4E2A_u670D_u52A1_u5668" class="headerlink" title="第一个服务器"></a>第一个服务器</h2><p>新建一个文本文件，命名为app.js:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"><span class="keyword">var</span> server = <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    res.writeHead(<span class="number">200</span>, &#123;<span class="string">'Content-Type'</span>: <span class="string">'text/html'</span>&#125;);</span><br><span class="line">    res.write(<span class="string">'&lt;h1&gt;Node.js&lt;/h1&gt;'</span>);</span><br><span class="line">    res.end(<span class="string">'&lt;p&gt;Hello world!&lt;/p&gt;'</span>);</span><br><span class="line">&#125;</span><br><span class="line">http.createServer(server).listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure></p>
-<p>这个程序调用了node提供的http模块，创建了一个server并监听3000端口。对于所有发至3000端口的http请求，该服务器都将作出同样的回应。</p>
-<p>打开控制台，进入程序所在文件夹，输入命令：<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">node</span><span class="identifier"> </span><span class="title">app</span>.js</span><br></pre></td></tr></table></figure></p>
-<p>打开浏览器，输入localhost:3000即可查看运行结果：<br><img src="http://7xpcjx.com1.z0.glb.clouddn.com/node_server.JPG" alt="node_server"></p>
-</span>
+<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>给定一个排好序的二维数组，判断某个数是否在该数组中。用两层二分查找来做，第一层二分查找矩阵中可能包含有目标数的行，第二层在该行中查找目标数。</p>
+<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> len, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> low = <span class="number">0</span>, high = len - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (low &lt;= high) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (low + high) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (arr[mid] == target)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span> (arr[mid] &lt; target)</span><br><span class="line">                low = mid + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                high = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">searchMatrix</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; matrix, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> low = <span class="number">0</span>, high = matrix.size() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (low &lt;= high) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (low + high) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> len = matrix[mid].size();</span><br><span class="line">            <span class="keyword">if</span> (matrix[mid][<span class="number">0</span>] &lt;= target &amp;&amp; matrix[mid][len - <span class="number">1</span>] &gt;= target)</span><br><span class="line">                <span class="keyword">return</span> binarySearch(matrix[mid], len, target);</span><br><span class="line">            <span class="keyword">if</span> (matrix[mid][<span class="number">0</span>] &gt; target)</span><br><span class="line">                high = mid - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                low = mid + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
@@ -302,7 +300,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/node-js/" rel="tag">#node.js</a>
+            <a href="/tags/LeetCode/" rel="tag">#LeetCode</a>
+          
+            <a href="/tags/array/" rel="tag">#array</a>
+          
+            <a href="/tags/binary-search/" rel="tag">#binary search</a>
           
         </div>
       
@@ -311,17 +313,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/25/Leet20/" rel="next" title="Leet Code 121 Best Time to Buy and Sell Stock">
-                <i class="fa fa-chevron-left"></i> Leet Code 121 Best Time to Buy and Sell Stock
+              <a href="/2016/01/01/Leet31/" rel="next" title="Leet Code 216 Combination Sum III">
+                <i class="fa fa-chevron-left"></i> Leet Code 216 Combination Sum III
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/28/Leet21/" rel="prev" title="Leet Code 230 Kth Smallest Element in a BST">
-                Leet Code 230 Kth Smallest Element in a BST <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -461,7 +459,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B2C_u4E00_u4E2Anode_u7A0B_u5E8F"><span class="nav-number">1.</span> <span class="nav-text">第一个node程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Node_u547D_u4EE4"><span class="nav-number">2.</span> <span class="nav-text">Node命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#REPL_u6A21_u5F0F"><span class="nav-number">3.</span> <span class="nav-text">REPL模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u7B2C_u4E00_u4E2A_u670D_u52A1_u5668"><span class="nav-number">4.</span> <span class="nav-text">第一个服务器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u9898_u76EE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u601D_u8DEF"><span class="nav-number">2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4EE3_u7801"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
