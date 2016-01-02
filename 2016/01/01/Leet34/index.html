@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="LeetCode,array,binary search," />
+  <meta name="keywords" content="LeetCode,array," />
 
 
 
@@ -51,19 +51,19 @@
 
 
 
-<meta name="description" content="题目Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
-Integers in each row are sorted from left to right.The first integer of each row">
+<meta name="description" content="题目According to the Wikipedia’s article: “The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.”
+Given a board with m by">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Leet Code 74 Search a 2D Matrix">
-<meta property="og:url" content="http://yoursite.com/2016/01/01/Leet32/index.html">
+<meta property="og:title" content="Leet Code 289 Game of Life">
+<meta property="og:url" content="http://yoursite.com/2016/01/01/Leet34/index.html">
 <meta property="og:site_name" content="Kthsdwwl's Blog">
-<meta property="og:description" content="题目Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
-Integers in each row are sorted from left to right.The first integer of each row">
-<meta property="og:updated_time" content="2016-01-02T02:13:23.437Z">
+<meta property="og:description" content="题目According to the Wikipedia’s article: “The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.”
+Given a board with m by">
+<meta property="og:updated_time" content="2016-01-02T05:08:43.859Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leet Code 74 Search a 2D Matrix">
-<meta name="twitter:description" content="题目Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
-Integers in each row are sorted from left to right.The first integer of each row">
+<meta name="twitter:title" content="Leet Code 289 Game of Life">
+<meta name="twitter:description" content="题目According to the Wikipedia’s article: “The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.”
+Given a board with m by">
 
 
 
@@ -75,7 +75,7 @@ Integers in each row are sorted from left to right.The first integer of each row
   };
 </script>
 
-  <title> Leet Code 74 Search a 2D Matrix | Kthsdwwl's Blog </title>
+  <title> Leet Code 289 Game of Life | Kthsdwwl's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -236,7 +236,7 @@ Integers in each row are sorted from left to right.The first integer of each row
             
             
               
-                Leet Code 74 Search a 2D Matrix
+                Leet Code 289 Game of Life
               
             
           </h1>
@@ -245,7 +245,7 @@ Integers in each row are sorted from left to right.The first integer of each row
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-01T20:32:41-05:00" content="2016-01-01">
+            <time itemprop="dateCreated" datetime="2016-01-01T23:49:07-05:00" content="2016-01-01">
               2016-01-01
             </time>
           </span>
@@ -284,15 +284,23 @@ Integers in each row are sorted from left to right.The first integer of each row
       
 
       
-        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:</p>
-<p>Integers in each row are sorted from left to right.<br>The first integer of each row is greater than the last integer of the previous row.<br>For example,</p>
-<p>Consider the following matrix:</p>
-<blockquote><p>[<br>  [1,   3,  5,  7],<br>  [10, 11, 16, 20],<br>  [23, 30, 34, 50]<br>]</p>
-</blockquote>
-<p>Given target = 3, return true.</p>
+        <span itemprop="articleBody"><h2 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h2><p>According to the Wikipedia’s article: “The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.”</p>
+<p>Given a board with m by n cells, each cell has an initial state live (1) or dead (0). Each cell interacts with its eight neighbors (horizontal, vertical, diagonal) using the following four rules (taken from the above Wikipedia article):</p>
 <a id="more"></a>
-<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>给定一个排好序的二维数组，判断某个数是否在该数组中。用两层二分查找来做，第一层二分查找矩阵中可能包含有目标数的行，第二层在该行中查找目标数。</p>
-<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> len, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> low = <span class="number">0</span>, high = len - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (low &lt;= high) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (low + high) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (arr[mid] == target)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">if</span> (arr[mid] &lt; target)</span><br><span class="line">                low = mid + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                high = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">searchMatrix</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; matrix, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> low = <span class="number">0</span>, high = matrix.size() - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (low &lt;= high) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (low + high) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> len = matrix[mid].size();</span><br><span class="line">            <span class="keyword">if</span> (matrix[mid][<span class="number">0</span>] &lt;= target &amp;&amp; matrix[mid][len - <span class="number">1</span>] &gt;= target)</span><br><span class="line">                <span class="keyword">return</span> binarySearch(matrix[mid], len, target);</span><br><span class="line">            <span class="keyword">if</span> (matrix[mid][<span class="number">0</span>] &gt; target)</span><br><span class="line">                high = mid - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                low = mid + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></span>
+<ol>
+<li>Any live cell with fewer than two live neighbors dies, as if caused by under-population.</li>
+<li>Any live cell with two or three live neighbors lives on to the next generation.</li>
+<li>Any live cell with more than three live neighbors dies, as if by over-population..</li>
+<li>Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.<br>Write a function to compute the next state (after one update) of the board given its current state.</li>
+</ol>
+<p><strong>Follow up: </strong></p>
+<ol>
+<li>Could you solve it in-place? Remember that the board needs to be updated at the same time: You cannot update some cells first and then use their updated values to update other cells.</li>
+<li>In this question, we represent the board using a 2D array. In principle, the board is infinite, which would cause problems when the active area encroaches the border of the array. How would you address these problems?</li>
+</ol>
+<h2 id="u601D_u8DEF"><a href="#u601D_u8DEF" class="headerlink" title="思路"></a>思路</h2><p>首先遍历一遍数组，对于每个元素，计算相邻元素中存活cell的个数，根据计算结果更新中间元素。为防止更新结果对后续结果产生影响，要遍历两遍。第一遍遍历，将本次存活，下次死亡的cell置为2；将本次死亡，下次存活的cell置为3。第二遍遍历，将值为2，3的cell更改为0和1。</p>
+<h2 id="u4EE3_u7801"><a href="#u4EE3_u7801" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">valid</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> m, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span> &lt;= i &amp;&amp; i &lt; m &amp;&amp;  <span class="number">0</span> &lt;= j &amp;&amp; j &lt; n;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">gameOfLife</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; board)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> neighbor[<span class="number">8</span>][<span class="number">2</span>] = &#123; &#123;-<span class="number">1</span>, -<span class="number">1</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">1</span>&#125;, &#123;<span class="number">0</span>, -<span class="number">1</span>&#125;, &#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;<span class="number">1</span>, -<span class="number">1</span>&#125;, &#123;<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;<span class="number">1</span>, <span class="number">1</span>&#125; &#125;;</span><br><span class="line">        <span class="keyword">int</span> m = board.size();</span><br><span class="line">        <span class="keyword">int</span> n = board[<span class="number">0</span>].size();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                <span class="keyword">int</span> live = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="number">8</span>; ++k) &#123;</span><br><span class="line">                    <span class="keyword">int</span> I = i + neighbor[k][<span class="number">0</span>];</span><br><span class="line">                    <span class="keyword">int</span> J = j + neighbor[k][<span class="number">1</span>];</span><br><span class="line">                    <span class="keyword">if</span> (!valid(I, J, m, n)) <span class="keyword">continue</span>;</span><br><span class="line">                    <span class="keyword">if</span> (board[I][J] == <span class="number">1</span> || board[I][J] == <span class="number">2</span>)</span><br><span class="line">                        ++live;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (board[i][j] == <span class="number">1</span> &amp;&amp; (live &lt; <span class="number">2</span> || live &gt; <span class="number">3</span>))</span><br><span class="line">                    board[i][j] = <span class="number">2</span>;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (board[i][j] == <span class="number">0</span> &amp;&amp; live == <span class="number">3</span>)</span><br><span class="line">                    board[i][j] = <span class="number">3</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                <span class="keyword">if</span> (board[i][j] == <span class="number">2</span>)</span><br><span class="line">                    board[i][j] = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (board[i][j] == <span class="number">3</span>)</span><br><span class="line">                    board[i][j] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</span>
       
     </div>
 
@@ -304,8 +312,6 @@ Integers in each row are sorted from left to right.The first integer of each row
           
             <a href="/tags/array/" rel="tag">#array</a>
           
-            <a href="/tags/binary-search/" rel="tag">#binary search</a>
-          
         </div>
       
 
@@ -313,17 +319,13 @@ Integers in each row are sorted from left to right.The first integer of each row
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/01/Leet31/" rel="next" title="Leet Code 216 Combination Sum III">
-                <i class="fa fa-chevron-left"></i> Leet Code 216 Combination Sum III
+              <a href="/2016/01/01/Leet33/" rel="next" title="Leet Code 73 Set Matrix Zeroes">
+                <i class="fa fa-chevron-left"></i> Leet Code 73 Set Matrix Zeroes
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/01/Leet33/" rel="prev" title="Leet Code 73 Set Matrix Zeroes">
-                Leet Code 73 Set Matrix Zeroes <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
