@@ -52,18 +52,18 @@
 
 
 <meta name="description" content="The operating system I’m using is Ubuntu 12.04 32 bit
-Install nodejsFirst we shoud install node js and npm. The following command is not gonna work, since they are outdated:1$ sudo apt-get install nod">
+Install nodejsFirst we shoud install node js and npm. The following command is not gonna work, since the installed nodejs and npm are outdated:12$">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cloud Computing Note1(Install azure cli tool)">
 <meta property="og:url" content="http://yoursite.com/2016/01/14/Cloud1/index.html">
 <meta property="og:site_name" content="Kthsdwwl's Blog">
 <meta property="og:description" content="The operating system I’m using is Ubuntu 12.04 32 bit
-Install nodejsFirst we shoud install node js and npm. The following command is not gonna work, since they are outdated:1$ sudo apt-get install nod">
-<meta property="og:updated_time" content="2016-01-14T20:58:21.885Z">
+Install nodejsFirst we shoud install node js and npm. The following command is not gonna work, since the installed nodejs and npm are outdated:12$">
+<meta property="og:updated_time" content="2016-01-15T01:57:43.186Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cloud Computing Note1(Install azure cli tool)">
 <meta name="twitter:description" content="The operating system I’m using is Ubuntu 12.04 32 bit
-Install nodejsFirst we shoud install node js and npm. The following command is not gonna work, since they are outdated:1$ sudo apt-get install nod">
+Install nodejsFirst we shoud install node js and npm. The following command is not gonna work, since the installed nodejs and npm are outdated:12$">
 
 
 
@@ -285,7 +285,9 @@ Install nodejsFirst we shoud install node js and npm. The following command is n
 
       
         <span itemprop="articleBody"><p>The operating system I’m using is Ubuntu 12.04 32 bit</p>
-<h2 id="Install_nodejs"><a href="#Install_nodejs" class="headerlink" title="Install nodejs"></a>Install nodejs</h2><p>First we shoud install node js and npm. The following command is not gonna work, since they are outdated:<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> install nodejs</span><br></pre></td></tr></table></figure><br>If the oudated versions of nodejs and npm have already been installed, remove them first:<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> purge nodejs npm</span><br></pre></td></tr></table></figure><br>Then use the following two commands to enable nodesource’s repo and install nodejs and npm:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ curl -sL http<span class="variable">s:</span>//<span class="keyword">deb</span>.nodesource.<span class="keyword">com</span>/setup | sudo bash -</span><br><span class="line">sudo apt-<span class="built_in">get</span> install nodejs</span><br></pre></td></tr></table></figure><br>The second command will install both nodejs and npm</p>
+<h2 id="Install_nodejs"><a href="#Install_nodejs" class="headerlink" title="Install nodejs"></a>Install nodejs</h2><p>First we shoud install node js and npm. The following command is not gonna work, since the installed nodejs and npm are outdated:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get <span class="operator"><span class="keyword">install</span> nodejs</span><br><span class="line">$ sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> npm</span></span><br></pre></td></tr></table></figure><br>If the oudated versions of nodejs and npm have already been installed, remove them first:<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> purge nodejs npm</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>Then use the following two commands to enable nodesource’s repo and install nodejs and npm:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ curl -sL http<span class="variable">s:</span>//<span class="keyword">deb</span>.nodesource.<span class="keyword">com</span>/setup | sudo bash -</span><br><span class="line">sudo apt-<span class="built_in">get</span> install nodejs</span><br></pre></td></tr></table></figure><br>The second command will install both nodejs and npm</p>
 <h2 id="Upgrade_npm"><a href="#Upgrade_npm" class="headerlink" title="Upgrade npm"></a>Upgrade npm</h2><p>If you meet the warning telling you that npm is not the latest version when you try to install azure, upgrade npm:<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> -g install <span class="built_in">npm</span><span class="property">@latest</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="Install_azure_cli"><a href="#Install_azure_cli" class="headerlink" title="Install azure cli"></a>Install azure cli</h2><p>Use the following command to install cli tool:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> azure-cli</span></span><br></pre></td></tr></table></figure></p>
 </span>
